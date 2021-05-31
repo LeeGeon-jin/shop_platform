@@ -20,8 +20,8 @@
             echo $row["expire_date"];
         }
         echo "</td>";
-        echo "<td><button onclick=\"location.href='add_voucher.php?u_id=".$row['v_id']."&u_name=".$row['v_name']."&u_disc=".$row['v_discount']."&u_date=".$row['expire_date']."'\">更新</button></td>";
-        echo "<td><button onclick=\"location.href='deleted_voucher.php?d_id=".$row['v_id']."'\">删除</button></td>";
+        echo "<td><button onclick=\"location.href='voucher/add_voucher.php?u_id=".$row['v_id']."&u_name=".$row['v_name']."&u_disc=".$row['v_discount']."&u_date=".$row['expire_date']."'\">更新</button></td>";
+        echo "<td><button onclick=\"location.href='voucher/deleted_voucher.php?d_id=".$row['v_id']."'\">删除</button></td>";
         echo "</tr>";
 
     }

@@ -27,8 +27,8 @@
             echo $row["image_url"];
         }
         echo "</td>";
-        echo "<td><button onclick=\"location.href='add_service.php?u_id=".$row['item_id']."&u_name=".$row['item_name']."&u_price=".$row['item_price']."&u_info=".$row['item_info']."&u_url=".$row['image_url']."'\">更新</button></td>";
-        echo "<td><button onclick=\"location.href='deleted_service.php?d_id=".$row['item_id']."'\">删除</button></td>";
+        echo "<td><button onclick=\"location.href='service/add_service.php?u_id=".$row['item_id']."&u_name=".$row['item_name']."&u_price=".$row['item_price']."&u_info=".$row['item_info']."&u_url=".$row['image_url']."'\">更新</button></td>";
+        echo "<td><button onclick=\"location.href='service/deleted_service.php?d_id=".$row['item_id']."'\">删除</button></td>";
         echo "</tr>";
     }
     ?>
