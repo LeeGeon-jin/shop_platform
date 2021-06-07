@@ -42,6 +42,8 @@ while ($row=$result->fetch_assoc())
     echo "</div>";
     echo "</div>";
 }
+
+$db->closeConn();
 ?>
 
 </body>
