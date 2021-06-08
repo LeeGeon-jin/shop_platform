@@ -36,11 +36,16 @@ $row=$result->fetch_assoc();
         <br>
         <br>
         <div>
-            <button onclick="location.href='checkout.php?item_id=<?php echo $row["item_id"] ?>'">立即购买</button> <button>加入购物车</button>
+            <button onclick="document.getElementById('item-form').submit()">立即购买</button> <button>加入购物车</button>
         </div>
     </div>
 </div>
 
+<form id="item-form" action="checkout.php" method="post">
+    <input id="item-id" name="item-id" type="hidden" value="<?php echo $row ['item_id']?>">
+    <input id="item-name" name="item-name" type="hidden" value="<?php echo $row ['item_name']?>">
+    <input id="item-price" name="item-price" type="hidden" value="<?php echo $row ['item_price'] ?>">
+</form>
 <?php
 $db->closeConn();
 ?>
