@@ -49,7 +49,7 @@
     </div>
     <br>
     <h2>订单信息</h2>
-    <table>
+    <table width="50%" style="text-align: left; margin-left: 5%">
         <tr>
             <th>服务</th>
             <th>价格</th>
@@ -63,13 +63,16 @@
                 echo "</tr>";
             }
         ?>
-        <tr></tr>
-        <tr></tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
         <tr>
             <th>合计</th>
-            <th><?php  ?></th>
+            <th><?php echo $_POST["item-price"] ?? "" ?></th>
         </tr>
     </table>
+    <input id="price" name="price" type="hidden" value="<?php echo $_POST['item-price'] ?? '' ?>">
+    <input id="iname" name="iname" type="hidden" value="<?php echo $_POST['item-name'] ?? '' ?>">
     <br>
     <h2>支付方式</h2>
     <div>
