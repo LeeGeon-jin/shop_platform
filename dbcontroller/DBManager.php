@@ -37,13 +37,19 @@ class DBManager
         }
     }
 
-    public function updateOrder($sql,$sql2)
+    public function updateOrder($sql,$sql2,$method)
     {
         if($this->conn->query($sql) && $this->conn->query($sql2))
         {
             echo "<script>";
             echo "alert('成功！');";
-            echo "location.href='../db_admin.php?table_id=order';";
+            if($method=="add")
+            {
+                echo "</script>";
+                return "success";
+            }
+            else if($method=="update")
+            {echo "location.href='../db_admin.php?table_id=order';";}
             echo "</script>";
         }
         else
